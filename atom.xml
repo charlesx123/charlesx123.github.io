@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://charlesx123.github.io/"/>
-  <updated>2017-03-22T10:58:48.292Z</updated>
+  <updated>2017-03-22T10:59:29.481Z</updated>
   <id>http://charlesx123.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>snapshot</title>
+    <title>神奇的快照(Snapshot)——系统救星</title>
     <link href="http://charlesx123.github.io/2017/03/22/snapshot/"/>
     <id>http://charlesx123.github.io/2017/03/22/snapshot/</id>
     <published>2017-03-22T10:57:57.000Z</published>
-    <updated>2017-03-22T10:58:48.292Z</updated>
+    <updated>2017-03-22T10:59:29.481Z</updated>
     
     <content type="html"><![CDATA[<h3 id="给系统拍个照，麻麻再也不用担心又要配置系统啦"><a href="#给系统拍个照，麻麻再也不用担心又要配置系统啦" class="headerlink" title="给系统拍个照，麻麻再也不用担心又要配置系统啦~"></a>给系统拍个照，麻麻再也不用担心又要配置系统啦~</h3><p><img src="/images/20170322-2.png" alt="kiwivm面板里的snapshot"><br><a id="more"></a></p>
 <h3 id="快照是啥？"><a href="#快照是啥？" class="headerlink" title="快照是啥？"></a>快照是啥？</h3><p>其实折腾VPS、虚拟主机总不担心出啥问题，大不了重装系统，秒秒钟，没错，搬瓦工的基本上10秒左右新系统就能装好，不过回过头来还得再配置、装软件等等。<br>这个时候有点像曾经的windows里的ghost？我们对系统进行拍个快照就可以啦，各大VPS控制面板有售~在配置好后创建snapshot，出了问题，回到这个点就可以了。搬瓦工的快照可以永久保留两个（set sticky），其余的保存30天左右自动清除。<br>尽情愉快的折腾，用vps感受各linux系统的不一样吧。</p>
