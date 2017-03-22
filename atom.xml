@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://charlesx123.github.io/"/>
-  <updated>2017-03-22T07:05:57.200Z</updated>
+  <updated>2017-03-22T07:12:11.232Z</updated>
   <id>http://charlesx123.github.io/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://charlesx123.github.io/2017/03/22/vpsgithexo/"/>
     <id>http://charlesx123.github.io/2017/03/22/vpsgithexo/</id>
     <published>2017-03-22T07:03:24.000Z</published>
-    <updated>2017-03-22T07:05:57.200Z</updated>
+    <updated>2017-03-22T07:12:11.232Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p><img src="/images/20170322.png" alt="1"></p>
+<p>搬瓦工的vps折腾从lamp到lnmp，从wordpress到emblog到discuz到hexo，hexo在主机上用芒果云编辑、主机上部署太麻烦，看了下rsync赶脚太痛苦，git在GitHub上部署很方便，于是便想着在vps上试试看可行与否，生命不息，折腾不止。<br><a id="more"></a></p>
+<blockquote>
 <p>本文环境：<br>vps: Ubuntu 16.04 64位<br>本地： Windows7 64位</p>
 </blockquote>
 <h3 id="本地安装git-nodejs-npm……"><a href="#本地安装git-nodejs-npm……" class="headerlink" title="本地安装git, nodejs, npm……"></a>本地安装git, nodejs, npm……</h3><p>参考hexo的<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">教程</a>……略</p>
@@ -46,10 +48,8 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;本文环境：&lt;br&gt;vps: Ubuntu 16.04 64位&lt;br&gt;本地： Windows7 64位&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;本地安装git-nodejs-npm……&quot;&gt;&lt;a href=&quot;#本地安装git-nodejs-
+      &lt;p&gt;&lt;img src=&quot;/images/20170322.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;搬瓦工的vps折腾从lamp到lnmp，从wordpress到emblog到discuz到hexo，hexo在主机上用芒果云编辑、主机上部署太麻烦，看了下rsync赶脚太痛苦，git在GitHub上部署很方便，于是便想着在vps上试试看可行与否，生命不息，折腾不止。&lt;br&gt;
     
     </summary>
     
