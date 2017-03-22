@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://charlesx123.github.io/"/>
-  <updated>2017-03-22T07:15:04.544Z</updated>
+  <updated>2017-03-22T07:18:01.157Z</updated>
   <id>http://charlesx123.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vpsgithexo</title>
+    <title>vps+git+hexo=快速静态网站</title>
     <link href="http://charlesx123.github.io/2017/03/22/vpsgithexo/"/>
     <id>http://charlesx123.github.io/2017/03/22/vpsgithexo/</id>
     <published>2017-03-22T07:03:24.000Z</published>
-    <updated>2017-03-22T07:15:04.544Z</updated>
+    <updated>2017-03-22T07:18:01.157Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/20170322.png" alt="生命不息，折腾不止"></p>
 <p>搬瓦工的vps折腾从lamp到lnmp，从wordpress到emblog到discuz到hexo，hexo在主机上用芒果云编辑、主机上部署太麻烦，看了下rsync赶脚太痛苦，git在GitHub上部署很方便，于是便想着在vps上试试看可行与否，生命不息，折腾不止。<br><a id="more"></a></p>
