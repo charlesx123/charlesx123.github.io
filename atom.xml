@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://charlesx123.github.io/"/>
-  <updated>2017-03-22T07:12:11.232Z</updated>
+  <updated>2017-03-22T07:15:04.544Z</updated>
   <id>http://charlesx123.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://charlesx123.github.io/2017/03/22/vpsgithexo/"/>
     <id>http://charlesx123.github.io/2017/03/22/vpsgithexo/</id>
     <published>2017-03-22T07:03:24.000Z</published>
-    <updated>2017-03-22T07:12:11.232Z</updated>
+    <updated>2017-03-22T07:15:04.544Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/20170322.png" alt="1"></p>
+    <content type="html"><![CDATA[<p><img src="/images/20170322.png" alt="生命不息，折腾不止"></p>
 <p>搬瓦工的vps折腾从lamp到lnmp，从wordpress到emblog到discuz到hexo，hexo在主机上用芒果云编辑、主机上部署太麻烦，看了下rsync赶脚太痛苦，git在GitHub上部署很方便，于是便想着在vps上试试看可行与否，生命不息，折腾不止。<br><a id="more"></a></p>
 <blockquote>
 <p>本文环境：<br>vps: Ubuntu 16.04 64位<br>本地： Windows7 64位</p>
@@ -48,7 +48,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/images/20170322.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/20170322.png&quot; alt=&quot;生命不息，折腾不止&quot;&gt;&lt;/p&gt;
 &lt;p&gt;搬瓦工的vps折腾从lamp到lnmp，从wordpress到emblog到discuz到hexo，hexo在主机上用芒果云编辑、主机上部署太麻烦，看了下rsync赶脚太痛苦，git在GitHub上部署很方便，于是便想着在vps上试试看可行与否，生命不息，折腾不止。&lt;br&gt;
     
     </summary>
@@ -73,9 +73,9 @@
     <link href="http://charlesx123.github.io/2017/03/15/eng1/"/>
     <id>http://charlesx123.github.io/2017/03/15/eng1/</id>
     <published>2017-03-15T06:05:31.000Z</published>
-    <updated>2017-03-19T13:25:02.000Z</updated>
+    <updated>2017-03-22T07:14:55.735Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/office.jpg" alt="1"></p>
+    <content type="html"><![CDATA[<p><img src="/images/office.jpg" alt="英语好头疼"></p>
 <blockquote>
 <p>四级虐我千百次，我待四级如初恋。<br>六级虐我千百次，我待六级如初恋。<br>英语虐我千百次，我待英语如初恋。</p>
 </blockquote>
@@ -102,7 +102,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/images/office.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/office.jpg&quot; alt=&quot;英语好头疼&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;四级虐我千百次，我待四级如初恋。&lt;br&gt;六级虐我千百次，我待六级如初恋。&lt;br&gt;英语虐我千百次，我待英语如初恋。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -124,9 +124,9 @@
     <link href="http://charlesx123.github.io/2017/03/15/timegoing/"/>
     <id>http://charlesx123.github.io/2017/03/15/timegoing/</id>
     <published>2017-03-15T05:56:14.000Z</published>
-    <updated>2017-03-19T13:25:34.000Z</updated>
+    <updated>2017-03-22T07:15:15.265Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/sucai3800.jpg" alt="1"></p>
+    <content type="html"><![CDATA[<p><img src="/images/sucai3800.jpg" alt="时间去哪儿了"></p>
 <blockquote>
 <p>时间都去哪儿了？还没好好感受年轻就老了。</p>
 </blockquote>
@@ -153,7 +153,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/images/sucai3800.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/sucai3800.jpg&quot; alt=&quot;时间去哪儿了&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;时间都去哪儿了？还没好好感受年轻就老了。&lt;/p&gt;
 &lt;/blockquote&gt;
