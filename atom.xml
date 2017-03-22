@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://charlesx123.github.io/"/>
-  <updated>2017-03-19T13:25:02.000Z</updated>
+  <updated>2017-03-22T07:05:57.200Z</updated>
   <id>http://charlesx123.github.io/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vpsgithexo</title>
+    <link href="http://charlesx123.github.io/2017/03/22/vpsgithexo/"/>
+    <id>http://charlesx123.github.io/2017/03/22/vpsgithexo/</id>
+    <published>2017-03-22T07:03:24.000Z</published>
+    <updated>2017-03-22T07:05:57.200Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文环境：<br>vps: Ubuntu 16.04 64位<br>本地： Windows7 64位</p>
+</blockquote>
+<h3 id="本地安装git-nodejs-npm……"><a href="#本地安装git-nodejs-npm……" class="headerlink" title="本地安装git, nodejs, npm……"></a>本地安装git, nodejs, npm……</h3><p>参考hexo的<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">教程</a>……略</p>
+<p>生成ssh秘钥：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;example@example.com&quot;</div></pre></td></tr></table></figure></p>
+<p>hexo的<code>_config.yml</code>配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: ssh://user@IPAddress:port/home/hexo.git</div><div class="line">  branch:</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>user可以是git或者root，@后面跟你的IP地址及端口号，因为搬瓦工的端口号并非是22所以用ssh的方式可指定端口号</p>
+</blockquote>
+<h3 id="vps配置："><a href="#vps配置：" class="headerlink" title="vps配置："></a>vps配置：</h3><p>修改/etc/ssh/sshd_config<br><code>vi /etc/ssh/sshd_config</code><br>用<code>/RSA</code>找到修改至如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#RSAAuthentication yes</div><div class="line">#PubkeyAuthentication yes</div><div class="line">AuthorizedKeysFile  /home/.ssh/authorized_keys</div></pre></td></tr></table></figure></p>
+<p>再将本地<code>~/.ssh/id_rsa.pub</code>的复制进去<code>/home/.ssh/authorized_keys</code><br><code>vi /home/.ssh/authorized_keys</code><br>配置<br>创建git用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">useradd git   // 或 adduser git</div><div class="line">passwd git //修改密码</div></pre></td></tr></table></figure></p>
+<h4 id="vps部署hexo自动发布"><a href="#vps部署hexo自动发布" class="headerlink" title="vps部署hexo自动发布"></a>vps部署hexo自动发布</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd /home  </div><div class="line">git init --bare hexo.git  //初始化</div><div class="line">chown -R git:git hexo.git //更改用户和用户组</div></pre></td></tr></table></figure>
+<p>在上面建立的<code>/home/hexo.git</code>和我在lnmp设置反向代理的<code>/home/wwwroot/web</code>的路径并不一致，这时我们可以在<code>/home/wwwroot/web</code>下git clone<code>/home/hexo.git</code> 同时让这一部自动执行，这就用到git hook里的post-receive。<br><code>vim /home/hexo.git/hooks/post-receive</code><br>加入下述内容，最后一行改为自己的配置哦~<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash -l</div><div class="line">#PUBLIC_WWW=/data/wwwroot/web</div><div class="line">#cd $PUBLIC_WWW</div><div class="line">#env -i git reset --hard</div><div class="line">#env -i git pull</div><div class="line">#GIT_REPO=/home/hexo.git</div><div class="line">#TMP_GIT_CLONE=/tmp/blog</div><div class="line">#PUBLIC_WWW=/data/wwwroot/web</div><div class="line">#rm -rf $&#123;TMP_GIT_CLONE&#125;</div><div class="line">#git clone $GIT_REPO $TMP_GIT_CLONE</div><div class="line">#rm -rf $&#123;PUBLIC_WWW&#125;/*</div><div class="line">#cp -rf $&#123;TMP_GIT_CLONE&#125;/* $&#123;PUBLIC_WWW&#125;</div><div class="line">git --work-tree=/home/wwwroot/dhc/public --git-dir=/home/hexo.git checkout -f</div></pre></td></tr></table></figure></p>
+<p>然后将其赋予权限执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">chmod +x /home/hexo.git/hooks/post-receive</div><div class="line">rm -fr /home/wwwroot/web</div><div class="line">git clone /home/git/hexo.git /home/wwwroot/web</div><div class="line">chown -R git:git /home/wwwroot/web</div><div class="line">cd /home/wwwroot/web</div><div class="line">git config user.name &quot;YOURNAME&quot;</div><div class="line">git config user.email &quot;YOUREMAIL@example.com&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="最后在本地只要hexo-d就可以部署啦"><a href="#最后在本地只要hexo-d就可以部署啦" class="headerlink" title="最后在本地只要hexo d就可以部署啦"></a>最后在本地只要<code>hexo d</code>就可以部署啦</h3><blockquote>
+<p>参考内容：</p>
+<ul>
+<li><a href="https://blog.mcosx.cn/post/hexo-deploy-git-vps.html" target="_blank" rel="external">hexo通过git自动部署到vps</a></li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文环境：&lt;br&gt;vps: Ubuntu 16.04 64位&lt;br&gt;本地： Windows7 64位&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;本地安装git-nodejs-npm……&quot;&gt;&lt;a href=&quot;#本地安装git-nodejs-
+    
+    </summary>
+    
+      <category term="折腾经验" scheme="http://charlesx123.github.io/categories/%E6%8A%98%E8%85%BE%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="vps" scheme="http://charlesx123.github.io/tags/vps/"/>
+    
+      <category term="git" scheme="http://charlesx123.github.io/tags/git/"/>
+    
+      <category term="hexo" scheme="http://charlesx123.github.io/tags/hexo/"/>
+    
+      <category term="博客" scheme="http://charlesx123.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="建站" scheme="http://charlesx123.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>英语听力如何提高？</title>
