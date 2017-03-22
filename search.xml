@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[snapshot]]></title>
+      <url>%2F2017%2F03%2F22%2Fsnapshot%2F</url>
+      <content type="text"><![CDATA[给系统拍个照，麻麻再也不用担心又要配置系统啦~ 快照是啥？其实折腾VPS、虚拟主机总不担心出啥问题，大不了重装系统，秒秒钟，没错，搬瓦工的基本上10秒左右新系统就能装好，不过回过头来还得再配置、装软件等等。这个时候有点像曾经的windows里的ghost？我们对系统进行拍个快照就可以啦，各大VPS控制面板有售~在配置好后创建snapshot，出了问题，回到这个点就可以了。搬瓦工的快照可以永久保留两个（set sticky），其余的保存30天左右自动清除。尽情愉快的折腾，用vps感受各linux系统的不一样吧。 virtual box也有该功能哦，可以用来体验非服务器版本的linux啦~]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[vps+git+hexo=快速静态网站]]></title>
       <url>%2F2017%2F03%2F22%2Fvpsgithexo%2F</url>
       <content type="text"><![CDATA[搬瓦工的vps折腾从lamp到lnmp，从wordpress到emblog到discuz到hexo，hexo在主机上用芒果云编辑、主机上部署太麻烦，看了下rsync赶脚太痛苦，git在GitHub上部署很方便，于是便想着在vps上试试看可行与否，生命不息，折腾不止。 本文环境：vps: Ubuntu 16.04 64位本地： Windows7 64位 本地安装git, nodejs, npm……参考hexo的教程……略 生成ssh秘钥：1ssh-keygen -t rsa -C &quot;example@example.com&quot; hexo的_config.yml配置：1234deploy: type: git repository: ssh://user@IPAddress:port/home/hexo.git branch: user可以是git或者root，@后面跟你的IP地址及端口号，因为搬瓦工的端口号并非是22所以用ssh的方式可指定端口号 vps配置：修改/etc/ssh/sshd_configvi /etc/ssh/sshd_config用/RSA找到修改至如下：123#RSAAuthentication yes#PubkeyAuthentication yesAuthorizedKeysFile /home/.ssh/authorized_keys 再将本地~/.ssh/id_rsa.pub的复制进去/home/.ssh/authorized_keysvi /home/.ssh/authorized_keys配置创建git用户12useradd git // 或 adduser gitpasswd git //修改密码 vps部署hexo自动发布123cd /home git init --bare hexo.git //初始化chown -R git:git hexo.git //更改用户和用户组 在上面建立的/home/hexo.git和我在lnmp设置反向代理的/home/wwwroot/web的路径并不一致，这时我们可以在/home/wwwroot/web下git clone/home/hexo.git 同时让这一部自动执行，这就用到git hook里的post-receive。vim /home/hexo.git/hooks/post-receive加入下述内容，最后一行改为自己的配置哦~12345678910111213#!/bin/bash -l#PUBLIC_WWW=/data/wwwroot/web#cd $PUBLIC_WWW#env -i git reset --hard#env -i git pull#GIT_REPO=/home/hexo.git#TMP_GIT_CLONE=/tmp/blog#PUBLIC_WWW=/data/wwwroot/web#rm -rf $&#123;TMP_GIT_CLONE&#125;#git clone $GIT_REPO $TMP_GIT_CLONE#rm -rf $&#123;PUBLIC_WWW&#125;/*#cp -rf $&#123;TMP_GIT_CLONE&#125;/* $&#123;PUBLIC_WWW&#125;git --work-tree=/home/wwwroot/dhc/public --git-dir=/home/hexo.git checkout -f 然后将其赋予权限执行。1234567chmod +x /home/hexo.git/hooks/post-receiverm -fr /home/wwwroot/webgit clone /home/git/hexo.git /home/wwwroot/webchown -R git:git /home/wwwroot/webcd /home/wwwroot/webgit config user.name &quot;YOURNAME&quot;git config user.email &quot;YOUREMAIL@example.com&quot; 最后在本地只要hexo d就可以部署啦 参考内容： hexo通过git自动部署到vps]]></content>
