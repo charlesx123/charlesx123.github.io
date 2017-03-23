@@ -3,21 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>脚踏实地 | DHClearn</title>
+    <title>VPS上add-apt-repository command not found的解决方法 | DHClearn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="社会在飞速的发展，带来的不仅仅是更优质的生活，同时也带来了浮躁。想赚钱是没错的，但不能因此改变自己的初衷，最起码，不坑人。当我们发现自己辛辛苦苦写干货的时候，已经有营销号随手“转发”甚至名字都不署，直接抄走，开始跑流量赚钱了，一时间觉得心里很不舒服，但这不是我们停止分享知识的理由，这不是我们也该去做营销的借口，如果都没人提供干货，全是段子的知乎、博客……这不是我们想要的结果。好像发展的太快，还没来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="脚踏实地">
-<meta property="og:url" content="http://charlesx123.github.io/about/index.html">
+        <meta name="keywords" content="vps,linux" />
+    
+    <meta name="description" content="在VPS各种折腾web后，又折腾起私有云，seafile、owncloud，今天在VPS上想要安装下私有云笔记试试看，出现一个问题，又得折腾。虽然心里明白，嗯，还是会继续用为知笔记的，毕竟上千篇笔记，倒腾来倒腾去实在太累了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS上add-apt-repository command not found的解决方法">
+<meta property="og:url" content="http://charlesx123.github.io/2017/03/23/addaptrepository/index.html">
 <meta property="og:site_name" content="DHClearn">
-<meta property="og:description" content="社会在飞速的发展，带来的不仅仅是更优质的生活，同时也带来了浮躁。想赚钱是没错的，但不能因此改变自己的初衷，最起码，不坑人。当我们发现自己辛辛苦苦写干货的时候，已经有营销号随手“转发”甚至名字都不署，直接抄走，开始跑流量赚钱了，一时间觉得心里很不舒服，但这不是我们停止分享知识的理由，这不是我们也该去做营销的借口，如果都没人提供干货，全是段子的知乎、博客……这不是我们想要的结果。好像发展的太快，还没来">
-<meta property="og:image" content="http://charlesx123.github.io/images/qrcode_430.jpg">
-<meta property="og:updated_time" content="2017-03-19T13:28:36.000Z">
+<meta property="og:description" content="在VPS各种折腾web后，又折腾起私有云，seafile、owncloud，今天在VPS上想要安装下私有云笔记试试看，出现一个问题，又得折腾。虽然心里明白，嗯，还是会继续用为知笔记的，毕竟上千篇笔记，倒腾来倒腾去实在太累了。">
+<meta property="og:image" content="http://charlesx123.github.io/images/20170323.png">
+<meta property="og:updated_time" content="2017-03-23T05:08:32.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="脚踏实地">
-<meta name="twitter:description" content="社会在飞速的发展，带来的不仅仅是更优质的生活，同时也带来了浮躁。想赚钱是没错的，但不能因此改变自己的初衷，最起码，不坑人。当我们发现自己辛辛苦苦写干货的时候，已经有营销号随手“转发”甚至名字都不署，直接抄走，开始跑流量赚钱了，一时间觉得心里很不舒服，但这不是我们停止分享知识的理由，这不是我们也该去做营销的借口，如果都没人提供干货，全是段子的知乎、博客……这不是我们想要的结果。好像发展的太快，还没来">
-<meta name="twitter:image" content="http://charlesx123.github.io/images/qrcode_430.jpg">
+<meta name="twitter:title" content="VPS上add-apt-repository command not found的解决方法">
+<meta name="twitter:description" content="在VPS各种折腾web后，又折腾起私有云，seafile、owncloud，今天在VPS上想要安装下私有云笔记试试看，出现一个问题，又得折腾。虽然心里明白，嗯，还是会继续用为知笔记的，毕竟上千篇笔记，倒腾来倒腾去实在太累了。">
+<meta name="twitter:image" content="http://charlesx123.github.io/images/20170323.png">
     
 
     
@@ -127,31 +129,55 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/about/index.html">脚踏实地</em>
+    <a class="page-title-link" href="/categories/折腾经验/">折腾经验</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+                            <article id="post-addaptrepository" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        脚踏实地
+        VPS上add-apt-repository command not found的解决方法
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/03/23/addaptrepository/" class="article-date">
+            <time datetime="2017-03-23T04:58:07.000Z" itemprop="datePublished">2017-03-23</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/">linux</a>, <a class="tag-link" href="/tags/vps/">vps</a>
+    </div>
+
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            <p>社会在飞速的发展，带来的不仅仅是更优质的生活，同时也带来了浮躁。想赚钱是没错的，但不能因此改变自己的初衷，最起码，不坑人。当我们发现自己辛辛苦苦写干货的时候，已经有营销号随手“转发”甚至名字都不署，直接抄走，开始跑流量赚钱了，一时间觉得心里很不舒服，但这不是我们停止分享知识的理由，这不是我们也该去做营销的借口，如果都没人提供干货，全是段子的知乎、博客……这不是我们想要的结果。<br>好像发展的太快，还没来得及沉下心扎扎实实做事儿，又匆匆忙忙赶着下一个活儿了，越忙越乱。套路越来越多，越来越不真诚。<br>在这里真诚的希望，自己能踏踏实实学习，提供干货，终身学习/英语/心理/正三观。DHClearn和你一同成长为更真诚的更好的自己。</p>
+            <p>在VPS各种折腾web后，又折腾起私有云，seafile、owncloud，今天在VPS上想要安装下私有云笔记试试看，出现一个问题，又得折腾。虽然心里明白，嗯，还是会继续用为知笔记的，毕竟上千篇笔记，倒腾来倒腾去实在太累了。<br><img src="/images/20170323.png" alt="-bash: add-apt-repository: command not found"></p>
+<a id="more"></a>
 <blockquote>
-<p>起初他们追杀共产主义者，我不是共产主义者，我不说话； 接着他们追杀犹太人，我不是犹太人，我不说话；此后他们追杀工会成员，我不是工会成员，我继续不说话；再后来他们追杀天主教徒，我不是天主教徒，我还是不说话；最后，他们奔我而来，再也没有人站起来为我说话了。 ——刻于美国波士顿犹太人被屠杀纪念碑</p>
+<p>为知大法好啊，支持Markdown、无限层级目录、自定义编辑器、word批量导入等等……除了搜索速度有些时候实在慢，其他几乎无可挑剔，只是现在开始收费了（其实一开始已经在付费了，vip分享还是很方便的，可以加密，有些项目上的加密给对方看还是不错的，就是有的时候腾讯总是封分享链接……），一年50还是60还是很划算的，在收费的云笔记里面可以算性价比最高最好的了，就是很难推动从来不用云笔记的童鞋使用为知了……</p>
 </blockquote>
-<p>欢迎关注微信公众号DHClearn，订阅我们~<br><img src="/images/qrcode_430.jpg" alt="1"></p>
+<h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><blockquote>
+<p>本文环境<br>搬瓦工openvz vps<br>ubuntu 16.04 64位<br>言归正传，在安装时发下如下问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root@localhost:~# add-apt-repository ppa:pbek/qownnotes</div><div class="line">-bash: add-apt-repository: command not found</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><p>折腾了一下，发现只要如下几个命令也就可以搞定了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apt-get install python-software-properties</div><div class="line">apt-get install software-properties-common</div></pre></td></tr></table></figure></p>
+<p>此时再执行<code>add-apt-repository</code>就可以了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># add-apt-repository ppa:pbek/qownnotes</div><div class="line"> QOwnNotes is a plain-text file notepad with markdown support and ownCloud integration</div><div class="line"> More info: https://launchpad.net/~pbek/+archive/ubuntu/qownnotes</div><div class="line">Press [ENTER] to continue or ctrl-c to cancel adding it</div><div class="line"></div><div class="line">gpg: keyring `/tmp/tmpkralb0yw/secring.gpg&apos; created</div><div class="line">gpg: keyring `/tmp/tmpkralb0yw/pubring.gpg&apos; created</div><div class="line">gpg: requesting key 47878405 from hkp server keyserver.ubuntu.com</div><div class="line">gpg: /tmp/tmpkralb0yw/trustdb.gpg: trustdb created</div><div class="line">gpg: key 47878405: public key &quot;Launchpad PPA for Patrizio Bekerle&quot; imported</div><div class="line">gpg: Total number processed: 1</div><div class="line">gpg:               imported: 1  (RSA: 1)</div><div class="line">OK</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参考内容：<br><a href="http://zqloter.blog.163.com/blog/static/8940004201211102401365/" target="_blank" rel="external">64位ubuntu server下sudo:add-apt-repository:command not found 问题</a></p>
+</blockquote>
 
         </div>
         <footer class="article-footer">
@@ -159,7 +185,7 @@
 
 
 
-    <a data-url="http://charlesx123.github.io/about/index.html" data-id="cj0lxsdbm00026k3rkxvd2svg" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://charlesx123.github.io/2017/03/23/addaptrepository/" data-id="cj0lxtqq100007g3rtfq0dn6l" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -226,7 +252,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="about/index.html" data-title="脚踏实地" data-url="http://charlesx123.github.io/about/index.html"></div>
+    <div class="ds-thread" data-thread-key="2017/03/23/addaptrepository/" data-title="VPS上add-apt-repository command not found的解决方法" data-url="http://charlesx123.github.io/2017/03/23/addaptrepository/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -287,6 +313,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/03/22/snapshot/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">神奇的快照(Snapshot)——系统救星</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
